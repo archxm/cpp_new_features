@@ -1,0 +1,507 @@
+{
+  "main": {
+    "id": "05c37a914b970ae2",
+    "type": "split",
+    "children": [
+      {
+        "id": "8eec7b7a302fbbfb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "921eaf1f98a2c544",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "吐血整理：C++11新特性.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "吐血整理：C++11新特性"
+            }
+          },
+          {
+            "id": "c127c8af09d75151",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "「Notes」C++14新特性浅谈.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "「Notes」C++14新特性浅谈"
+            }
+          },
+          {
+            "id": "7b72792c5d8aeba3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "每个c++开发人员都应该使用的10个c++ 11特性.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "每个c++开发人员都应该使用的10个c++ 11特性"
+            }
+          },
+          {
+            "id": "3a0925a2df97ad8d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "深入理解C++11.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "深入理解C++11"
+            }
+          },
+          {
+            "id": "dd78c07aa638b92e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "C++核心编程.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "C++核心编程"
+            }
+          },
+          {
+            "id": "4d753f4e59669ad7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "C++基础入门.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "C++基础入门"
+            }
+          },
+          {
+            "id": "d497283e0f42a6d0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "README"
+            }
+          },
+          {
+            "id": "e5bc1abd5f4602fc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "如何在 C++11 中使用 Lambda 表达式.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "如何在 C++11 中使用 Lambda 表达式"
+            }
+          },
+          {
+            "id": "102b3624b9767709",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "学习笔记：C++ 11新特性.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "学习笔记：C++ 11新特性"
+            }
+          },
+          {
+            "id": "d9bb1b707aff94ac",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "在c++项目中你必须真正使用的15个c++特性.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "在c++项目中你必须真正使用的15个c++特性"
+            }
+          },
+          {
+            "id": "261bc3d3ac85f9cd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "总结归纳：C++17新特性.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "总结归纳：C++17新特性"
+            }
+          },
+          {
+            "id": "a0b6da07745990e4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "C++ 入门教程（41课时） - 阿里云大学.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "C++ 入门教程（41课时） - 阿里云大学"
+            }
+          },
+          {
+            "id": "219224c1e8e424b2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "cpp_11/001_meaning_keywords_README.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "001_meaning_keywords_README"
+            }
+          },
+          {
+            "id": "4ef5f5668d2b2221",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "cpp_11/001_new_keywords_README.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "001_new_keywords_README"
+            }
+          },
+          {
+            "id": "5df249cf50591725",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "cpp_11/README.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "README"
+            }
+          },
+          {
+            "id": "992bc470fb44e125",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "C++11常用新特性（二）.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "C++11常用新特性（二）"
+            }
+          },
+          {
+            "id": "658e1a5f173c6ab7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "C++11常用新特性（一）.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "C++11常用新特性（一）"
+            }
+          },
+          {
+            "id": "24d066bbd31e7a54",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "cpp_17/README.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "README"
+            }
+          },
+          {
+            "id": "5b4a66786ab622dd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "cpp_14/README.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "README"
+            }
+          },
+          {
+            "id": "e9c960c682ffc75b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "cpp_17/001_keywords_README.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "001_keywords_README"
+            }
+          },
+          {
+            "id": "860f2dda90a5bb36",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.13.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "版本说明 1.13.4"
+            }
+          }
+        ],
+        "currentTab": 10
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ac09c0dad14b7a70",
+    "type": "split",
+    "children": [
+      {
+        "id": "ba2b5d0762c48117",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e7ba08bb34cf02e7",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "66294d92888c169d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "3a90b8c663d754a3",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "47093ed1b6132e81",
+    "type": "split",
+    "children": [
+      {
+        "id": "900326ed399bd9f0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "495906d0d4376382",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "「Notes」C++14新特性浅谈.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "「Notes」C++14新特性浅谈 的反向链接列表"
+            }
+          },
+          {
+            "id": "c5e233ed3906a033",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "「Notes」C++14新特性浅谈.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "「Notes」C++14新特性浅谈 的出链列表"
+            }
+          },
+          {
+            "id": "f4d4c870fece4551",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "f7ec8fa564dd9278",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "daf286771fb97260",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "总结归纳：C++17新特性.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大纲"
+            }
+          },
+          {
+            "id": "9e39daef2a1655c8",
+            "type": "leaf",
+            "state": {
+              "type": "quiet-outline",
+              "state": {},
+              "icon": "lines-of-text",
+              "title": "Quiet Outline"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false
+    }
+  },
+  "active": "261bc3d3ac85f9cd",
+  "lastOpenFiles": [
+    "cpp_14/README.md",
+    "总结归纳：C++17新特性.md",
+    "cpp_17/README.md",
+    "cpp_17/001_keywords_README.md",
+    "deprecated.md",
+    "「Notes」C++14新特性浅谈.md",
+    "README.md",
+    "C++学习笔记.md",
+    "C++基础入门.md",
+    "C++核心编程.md",
+    "深入理解C++11.md",
+    "如何在 C++11 中使用 Lambda 表达式.md",
+    "每个c++开发人员都应该使用的10个c++ 11特性.md",
+    "cpp_11/README.md",
+    "cpp_11/001_new_keywords_README.md",
+    "cpp_11/001_meaning_keywords_README.md",
+    "C++ 入门教程（41课时） - 阿里云大学.md",
+    "在c++项目中你必须真正使用的15个c++特性.md",
+    "学习笔记：C++ 11新特性.md",
+    "C++11常用新特性（一）.md",
+    "C++11常用新特性（二）.md",
+    "吐血整理：C++11新特性.md",
+    "2026-07-24.md",
+    "未命名.canvas",
+    "cpp_20/001_keywords_README.md",
+    "cpp_20/README.md",
+    "C++14新特性的所有知识点全在这儿啦！.md"
+  ]
+}
