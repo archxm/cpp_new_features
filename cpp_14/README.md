@@ -1,9 +1,7 @@
-## <h1 id="cpp_14">C++14新特性</h1>
-
 ![C++14思维导图](https://www.0voice.com/uiwebsite/cpp_new_features/C++14_new_features.png)
------------
 
-<h4 id="cpp_14_01">函数返回值类型推导</h4>
+
+### 1 函数返回值类型推导
 
 C++14对函数返回类型推导规则做了优化，先看一段代码：
 
@@ -21,6 +19,7 @@ int main() {
     return 0;
 }
 ```
+
 使用C++11编译：
 ```CPP
 ~/test$ g++ test.cc -std=c++11
@@ -29,6 +28,7 @@ test.cc:5:16: error: ‘func’ function uses ‘auto’ type specifier without 
                 ^
 test.cc:5:16: note: deduced return type only available with -std=c++14 or -std=gnu++14
 ```
+
 上面的代码使用C++11是不能通过编译的，通过编译器输出的信息也可以看见这个特性需要到C++14才被支持。
 
 返回值类型推导也可以用在模板中：
@@ -48,7 +48,7 @@ int main() {
 
 注意：
 
-）函数内如果有多个return语句，它们必须返回相同的类型，否则编译失败。
+> 函数内如果有多个return语句，它们必须返回相同的类型，否则编译失败。
 
 ```CPP
 auto func(bool flag) {
@@ -58,7 +58,7 @@ auto func(bool flag) {
 // inconsistent deduction for auto return type: ‘int’ and then ‘double’
 ```
 
-）如果return语句返回初始化列表，返回值类型推导也会失败
+> 如果return语句返回初始化列表，返回值类型推导也会失败
 
 ```CPP
 auto func() {
@@ -66,7 +66,7 @@ auto func() {
 }
 ```
 
-) 如果函数是虚函数，不能使用返回值类型推导
+> 如果函数是虚函数，不能使用返回值类型推导
 ```CPP
 struct A {
 	// error: virtual function cannot have deduced return type
@@ -74,7 +74,7 @@ struct A {
 }
 ```
 
-） 返回类型推导可以用在前向声明中，但是在使用它们之前，翻译单元中必须能够得到函数定义
+> 返回类型推导可以用在前向声明中，但是在使用它们之前，翻译单元中必须能够得到函数定义
 ```CPP
 auto f();               // declared, not yet defined
 auto f() { return 42; } // defined, return type is int
@@ -84,7 +84,7 @@ int main() {
 }
 ```
 
-）返回类型推导可以用在递归函数中，但是递归调用必须以至少一个返回语句作为先导，以便编译器推导出返回类型。
+> 返回类型推导可以用在递归函数中，但是递归调用必须以至少一个返回语句作为先导，以便编译器推导出返回类型。
 ```CPP
 auto sum(int i) {
     if (i == 1)
@@ -94,10 +94,9 @@ auto sum(int i) {
 }
 ```
 
-<br/>
-<br/>
 
-<h4 id="cpp_14_02">lambda参数auto</h4>
+
+### 2 lambda参数auto
 
 在C++11中，lambda表达式参数需要使用具体的类型声明：
 
@@ -116,7 +115,7 @@ cout << f(2.3f) << endl;
 <br/>
 <br/>
 
-<h4 id="cpp_14_03">变量模板</h4>
+### 3 变量模板
 
 C++14支持变量模板：
 
@@ -131,10 +130,9 @@ int main() {
 }
 ```
 
-<br/>
-<br/>
 
-<h4 id="cpp_14_04">别名模板</h4>
+
+### 4 别名模板
 
 C++14也支持别名模板：
 
@@ -158,14 +156,12 @@ int main() {
 }
 ```
 
-<br/>
-<br/>
 
-<h4 id="cpp_14_05">constexpr的限制</h4>
+### 5 constexpr的限制
 
 C++14相较于C++11对constexpr减少了一些限制：
 
-）C++11中constexpr函数可以使用递归，在C++14中可以使用局部变量和循环
+> C++11中constexpr函数可以使用递归，在C++14中可以使用局部变量和循环
 
 ```CPP
 constexpr int factorial(int n) { // C++14 和 C++11均可
@@ -184,7 +180,7 @@ constexpr int factorial(int n) { // C++11中不可，C++14中可以
 }
 ```
 
-）C++11中constexpr函数必须必须把所有东西都放在一个单独的return语句中，而constexpr则无此限制：
+> C++11中constexpr函数必须必须把所有东西都放在一个单独的return语句中，而constexpr则无此限制：
 ```CPP
 constexpr int func(bool flag) { // C++14 和 C++11均可
     return 0;
@@ -199,10 +195,8 @@ constexpr int func(bool flag) { // C++11中不可，C++14中可以
 }
 ```
 
-<br/>
-<br/>
 
-<h4 id="cpp_14_06">[[deprecated]]标记</h4>
+### 6 deprecated 标记
 
 C++14中增加了deprecated标记，修饰类、变、函数等，当程序中使用到了被其修饰的代码时，编译时被产生警告，用户提示开发者该标记修饰的内容将来可能会被丢弃，尽量不要使用。
 
@@ -224,23 +218,18 @@ test.cc:11:7: warning: ‘A’ is deprecated [-Wdeprecated-declarations]
        ^
 test.cc:6:23: note: declared here
  struct [[deprecated]] A {
- ```
- 
-<br/>
-<br/>
+```
 
-<h4 id="cpp_14_07">二进制字面量与整形字面量分隔符</h4>
+### 7 二进制字面量与整形字面量分隔符
 
-C++14引入了二进制字面量，也引入了分隔符，防止看起来眼花哈~
+> C++14引入了二进制字面量，也引入了分隔符，防止看起来眼花哈~
 ```CPP
 int a = 0b0001'0011'1010;
 double b = 3.14'1234'1234'1234;
 ```
 
-<br/>
-<br/>
 
-<h4 id="cpp_14_08">std::make_unique</h4>
+### 8 std::make_unique
 
 C++11中有std::make_shared，却没有std::make_unique，在C++14已经改善。
 
@@ -249,10 +238,8 @@ struct A {};
 std::unique_ptr<A> ptr = std::make_unique<A>();
 ```
 
-<br/>
-<br/>
 
-<h4 id="cpp_14_08">std::shared_timed_mutex与std::shared_lock</h4>
+### 9 std::shared_timed_mutex与std::shared_lock
 
 C++14通过std::shared_timed_mutex和std::shared_lock来实现读写锁，保证多个线程可以同时读，但是写线程必须独立运行，写操作不可以同时和读操作一起进行。
 
@@ -279,10 +266,8 @@ struct ThreadSafe {
 };
 ```
 
-<br/>
-<br/>
 
-<h4 id="cpp_14_09">std::integer_sequence</h4>
+### 10 std::integer_sequence
 ```CPP
 template<typename T, T... ints>
 void print_sequence(std::integer_sequence<T, ints...> int_seq)
@@ -323,10 +308,8 @@ auto map_filter_tuple(F&& f, T& t) {
 }
 ```
 
-<br/>
-<br/>
 
-<h4 id="cpp_14_10">std::exchange</h4>
+### 11 std::exchange
 
 直接看代码吧：
 
@@ -356,10 +339,8 @@ constexpr T exchange(T& obj, U&& new_value) {
 
 可以看见new_value的值给了obj，而没有对new_value赋值！
 
-<br/>
-<br/>
 
-<h4 id="cpp_14_11">std::quoted</h4>
+### 12 std::quoted
 
 C++14引入std::quoted用于给字符串添加双引号，直接看代码：
 
