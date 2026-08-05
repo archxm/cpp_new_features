@@ -162,6 +162,34 @@
             }
           },
           {
+            "id": "f02e05b5d84cc89f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "cpp_20/001_keywords_README.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "001_keywords_README"
+            }
+          },
+          {
+            "id": "1231945f4fc1b7f3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "cpp_20/README.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "README"
+            }
+          },
+          {
             "id": "a0b6da07745990e4",
             "type": "leaf",
             "state": {
@@ -300,7 +328,7 @@
             }
           }
         ],
-        "currentTab": 10
+        "currentTab": 11
       }
     ],
     "direction": "vertical"
@@ -437,7 +465,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "总结归纳：C++17新特性.md",
+                "file": "cpp_20/001_keywords_README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -457,11 +485,11 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 275.166748046875
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -474,11 +502,13 @@
       "bases:新建数据库": false
     }
   },
-  "active": "261bc3d3ac85f9cd",
+  "active": "f02e05b5d84cc89f",
   "lastOpenFiles": [
-    "cpp_14/README.md",
+    "cpp_20/README.md",
+    "cpp_20/001_keywords_README.md",
     "总结归纳：C++17新特性.md",
     "cpp_17/README.md",
+    "cpp_14/README.md",
     "cpp_17/001_keywords_README.md",
     "deprecated.md",
     "「Notes」C++14新特性浅谈.md",
@@ -500,8 +530,6 @@
     "吐血整理：C++11新特性.md",
     "2026-07-24.md",
     "未命名.canvas",
-    "cpp_20/001_keywords_README.md",
-    "cpp_20/README.md",
     "C++14新特性的所有知识点全在这儿啦！.md"
   ]
 }

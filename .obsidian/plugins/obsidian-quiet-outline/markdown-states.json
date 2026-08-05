@@ -105,12 +105,12 @@
     "expandedKeys": [],
     "cursor": {
       "from": {
-        "line": 2,
-        "ch": 11
+        "line": 3,
+        "ch": 0
       },
       "to": {
-        "line": 2,
-        "ch": 11
+        "line": 3,
+        "ch": 0
       }
     }
   },
@@ -124,14 +124,47 @@
     ],
     "cursor": {
       "from": {
-        "line": 2,
-        "ch": 13
+        "line": 4,
+        "ch": 21
       },
       "to": {
-        "line": 2,
-        "ch": 13
+        "line": 4,
+        "ch": 21
       }
     },
-    "scroll": 45.08510638297872
+    "scroll": 28.6330035731123
+  },
+  "cpp_20/001_keywords_README.md": {
+    "expandedKeys": [
+      "item-3-10",
+      "item-2-17",
+      "item-3-2",
+      "item-2-0"
+    ],
+    "cursor": {
+      "from": {
+        "line": 10,
+        "ch": 18
+      },
+      "to": {
+        "line": 10,
+        "ch": 18
+      }
+    },
+    "scroll": 0
+  },
+  "cpp_20/README.md": {
+    "expandedKeys": [],
+    "cursor": {
+      "from": {
+        "line": 3,
+        "ch": 4
+      },
+      "to": {
+        "line": 3,
+        "ch": 4
+      }
+    },
+    "scroll": 0
   }
 }
