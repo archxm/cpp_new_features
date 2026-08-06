@@ -1,10 +1,10 @@
 ## C++20新增关键字
 
-### char8_t
+### 1. char8_t
 
 char8_t - UTF-8 字符表示的类型，要求大到足以表示任何 UTF-8 编码单元（ 8 位）。它与 unsigned char 具有相同的大小、符号性和对齐（从而与 char 和 signed char 具有相同的大小和对齐），但它是独立的类型。
 
-### concept
+### 2. concept
 
 C++20引进了概念（Concepts）这一新特性。
 概念是指给一组要求（Requirements）所起的名字。概念是一种具名谓词。
@@ -48,13 +48,13 @@ requires ( 形参列表(可选) ) { 要求序列 }
   * reuires 约束表达式 ;
 
 #### Concepts的定义
-```C++
+```CPP
 template < template-parameter-list >
 concept  concept-name = constraint-expression;
 ```
 
 其中，constraint-expression是一个可以被eval为bool的表达式或者编译期函数。 在使用定义好的concept时，constraint-expression会根据上面template-parameter-list传入的类型，执行编译期计算，判断使用该concept的模板定义是否满足。 如果不满足，则编译期会给定一个具有明确语义的错误，即 这个concept没有匹配成功啦啦这种。 注意到，上述匹配的行为都是在编译期完成的，因此concept其实是zero-cost的。 举个例子来描述一下，最基本的concept的定义。
-```C++
+```CPP
 // 一个永远都能匹配成功的concept
 template <typename T>
 concept always_satisfied = true; 
@@ -69,7 +69,7 @@ concept signed_integral = integral<T> && std::is_signed_v<T>;
 ```
 
 接下来，我们再简单示例一下如何使用一个concept
-```C++
+```CPP
 // 任意类型都能匹配成功的约束，因此mul只要支持乘法运算符的类型都可以匹配成功。
 template <always_satisfied T>
 T mul(T a, T b) {
@@ -101,7 +101,7 @@ int main() {
 
 #### Concept的使用方法
 与auto关键字的一些结合方式
-```C++
+```CPP
 // 约束函数模板方法1
 template <my_concept T>
 void f(T v);
@@ -127,7 +127,7 @@ my_concept auto foo = ...;
 ```
 
 Concept当然也可以用在lambda函数上，使用方法跟上面一样
-```C++
+```CPP
 // 约束lambda函数的方法1
 auto f = []<my_concept T> (T v) {
   // ...
@@ -149,9 +149,10 @@ auto g = []<my_concept auto v> () {
   // ...
 };
 ```
+
 #### concept的组合(与或非)
 concept的本质是一个模板的编译期的bool变量，因此它可以使用C++的与或非三个操作符。例如，我们可以在定义concept的时候，使用其他concept或者表达式，进行逻辑操作。
-```C++
+```cpp
 template <typename T>
 concept Integral = std::is_integral<T>::value;
 template <typename T>
@@ -159,19 +160,20 @@ concept SignedIntegral = Integral<T> && std::is_signed<T>::value;
 template <typename T>
 concept UnsignedIntegral = Integral<T> && !SignedIntegral<T>;
 ```
+
 当然，我们也可以在使用concept的时候使用 逻辑操作符。
-```C++
+```cpp
 template <typename T>
 requires Integral<T> && std::is_signed_v<T>
 T add(T a, T b);
 ```
 
-### requires
+### 3. requires
 
 #### requires关键字的其他用法
 
 requires关键字不仅能用在concept的使用上，也可以用在定义中。 例如
-```C++
+```cpp
 // requires用在使用concept时
 template <typename T>
   requires my_concept<T>
@@ -187,9 +189,10 @@ template <typename T>
 T add(T a, T b) {
   return a + b;
 }
-``
+```
+
 requires的语法理解：requires后接的东西本质上是一个表达式
-```C++
+```CPP
 // requires后面接的是一个正在被eval的concept，用在上面的concept的使用中。
 requires evaled-concept
 
@@ -209,7 +212,7 @@ T add(T a, T b) {
 为了提高concept定义的能力，requires支持用大括号的语法，进行多个约束分开表达，这些约束之间的关系是与的关系。
 
 requires的这种方式的语法形式是
-```C++
+```CPP
 requires { requirement-seq }
 requires ( parameter-list(optional) ) { requirement-seq }
 ```
@@ -222,7 +225,7 @@ requires ( parameter-list(optional) ) { requirement-seq }
 
 1) 简单约束
 简单约束就是一个任意的表达式，编译器对这个约束的检查就是检查这个表达式是否是合法的。注意，不是说这个表达式在编译期运行返回true或者false。而是这个表达式是否合法。 例如
-```C++
+```CPP
 template<typename T>
 concept Addable =
 requires (T a, T b) {
@@ -238,7 +241,7 @@ concept Swappable = requires(T&& t, U&& u) {
 ```
 2) 类型约束
 类型的约束是类似模板里面的参数一样，在typename后接一个类型。这个约束表达的含义是该类型在该concept进行evaluate时，必须是存在的。 如下面的例子：
-```C++
+```CPP
 struct foo {
     int foo;
 };
@@ -278,7 +281,7 @@ g(baz{}); // PASS.
 
 3) 复合约束
 复合约束用于约束表达式的返回值的类型。它的写法形式为：
-```C++
+```CPP
 // 这里 ->和type-constraint是可选的.
 {expression} noexcept(optional) -> type-constraint;
 ```
@@ -293,7 +296,7 @@ g(baz{}); // PASS.
 
 上述步骤任何一个失败,则evaluate的结果是false.
 
-```C++
+```CPP
 template <typename T>
 concept C = requires(T x) {
   {*x} -> typename T::inner; // the type of the expression `*x` is convertible to `T::inner`
@@ -305,11 +308,11 @@ concept C = requires(T x) {
 4) 嵌套约束
 
 requires内部还可以嵌套requires. 这种方式被称为嵌套的约束.它的形式为
-```C++
+```CPP
 requires constraint-expression ;
 ```
 例如
-```C++
+```CPP
 template <class T>
 concept Semiregular = DefaultConstructible<T> &&
     CopyConstructible<T> && Destructible<T> && CopyAssignable<T> &&
@@ -324,12 +327,11 @@ requires(T a, size_t n) {
 ```
 
 
-### consteval
+### 4. consteval
 
 consteval关键字，用来修饰函数时常量值的表达式，而且是强制性的。如果函数本身不是常量值的表达式的话则会编译失败。
 constexpr修饰函数时其实只是告诉编译器该函数可以按常量值的表达式去优化，但是如果函数本身不是常量值的表达式的话依然能够编译通过。
-```C++
-
+```CPP
 constexpr int add100_constexpr(int n) {
   return n + 100;
 }
@@ -346,15 +348,15 @@ void test() {
 }
 ```
 
-### co_await
+### 5. co_await
 
 co_await可以挂起和恢复函数的执行。
 
-### co_yield
+### 6. co_yield
 
 co_yield可以在不结束协程的情况下从协程返回一些值。因此，可以用它来编写无终止条件的生成器函数。
 
-### co_return
+### 7. co_return
 
 co_return允许从协程返回一些值，需要自行定制。
 

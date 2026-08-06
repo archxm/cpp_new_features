@@ -1,5 +1,6 @@
 {
   "baseFontSize": 19,
   "baseFontSizeAction": true,
-  "monospaceFontFamily": "IntelOne Mono"
+  "monospaceFontFamily": "IntelOne Mono",
+  "cssTheme": "Blue Topaz"
 }

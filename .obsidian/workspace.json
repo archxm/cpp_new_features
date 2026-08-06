@@ -168,7 +168,7 @@
               "type": "markdown",
               "state": {
                 "file": "cpp_20/001_keywords_README.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
@@ -485,7 +485,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -502,7 +502,7 @@
       "bases:新建数据库": false
     }
   },
-  "active": "f02e05b5d84cc89f",
+  "active": "9e39daef2a1655c8",
   "lastOpenFiles": [
     "cpp_20/README.md",
     "cpp_20/001_keywords_README.md",
